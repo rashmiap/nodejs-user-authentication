@@ -20,6 +20,9 @@ const user = mongoose.Schema({
     },
     dishImageUrl: {
       type: String
+    },
+    dishPollCount: {
+      Type: Number
     }
   }]
 });

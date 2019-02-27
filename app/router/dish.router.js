@@ -30,11 +30,25 @@ router.post('/add', VerifyToken, function(req, res, next){
   // execute the update query
   User.findOneAndUpdate({_id: req.userId}, {"$push": {"dish": dish}}, {new: true}, (err, doc)=> {
     if (err) {
-      return res.json(err);
+      return res.status(500).send(err, "There was a problem updating dish details");
     }
     res.json({
       "dish": doc.dish
     })
   })
 })
+
+// GET all dishes from all users
+router.get('/list', VerifyToken, function(req, res, next) {
+  User.find({}, function(err, users) {
+    var userMap = {};
+
+    users.forEach(function(user) {
+      userMap[user._id] = user.dish;
+    });
+
+    res.send(userMap);
+  });
+});
+
 module.exports = router;

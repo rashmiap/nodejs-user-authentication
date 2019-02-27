@@ -5,14 +5,6 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user.model');
 const jwt = require('jsonwebtoken');
 
-
-// GET endpoint to test
-router.get('/checking', function(req, res){
-   res.json({
-      "Tutorial": "Welcome to the Node express JWT Tutorial"
-   });
-});
-
 //POST endpoint to handle user signup/register
 router.post('/signup', function(req, res){
   User.findOne({ email: req.body.email }, function(err, user) {
