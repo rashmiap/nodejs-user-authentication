@@ -17,5 +17,24 @@ router.get('/me', VerifyToken, function(req, res, next){
   });
 });
 
-
+// POST add new dishes to a particular user
+router.post('/add', VerifyToken, function(req, res, next){
+  const body = req.body;
+  if(!body.description){
+    return res.json({error: "Must provide dish description"})
+  }
+  // Make new dish doc
+  const dish = {
+    "description" : body.description,
+  };
+  // execute the update query
+  User.findOneAndUpdate({_id: req.userId}, {"$push": {"dish": dish}}, {new: true}, (err, doc)=> {
+    if (err) {
+      return res.json(err);
+    }
+    res.json({
+      "dish": doc.dish
+    })
+  })
+})
 module.exports = router;
