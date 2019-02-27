@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user.model');
 const jwt = require('jsonwebtoken');
 
+
 // GET endpoint to test
 router.get('/checking', function(req, res){
    res.json({
