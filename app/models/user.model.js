@@ -19,7 +19,6 @@ const user = mongoose.Schema({
       trim: true
     },
     dishImageUrl: {
-      required: "dish image uploaded S3 link is required",
       type: String
     }
   }]
