@@ -1,10 +1,11 @@
-// server.js
-
 const express = require('express');
 const app = express();
+let router = express.Router();
 const bodyParser = require('body-parser');
-let usersRouter = require('./app/router/user.router.js')
-const db = require('./app/config/mongodb.env.js')
+const usersRouter = require('./app/router/user.router.js');
+const dishRouter = require('./app/router/dish.router.js');
+const pollRouter = require('./app/router/poll.router.js');
+const db = require('./app/config/mongodb.env.js');
 
 const PORT = 6000;
 
@@ -19,4 +20,7 @@ app.listen(PORT, function(){
    console.log('Server is running on Port',PORT);
 });
 
-app.use('/api',usersRouter)
+// Setup router for http rest routes
+app.use('/api/auth', usersRouter)
+app.use('/api/dish', dishRouter)
+app.use('/api/dish', pollRouter)
