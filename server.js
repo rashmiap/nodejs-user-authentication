@@ -24,6 +24,10 @@ app.listen(PORT, function(){
    console.log('Server is running on Port',PORT);
 });
 
+app.get('/', function (req, res) {
+     res.sendFile(process.cwd() + '/views/index.html');
+});
+
 // Setup router for http rest routes
 app.use('/api/auth', usersRouter)
 app.use('/api/dish', dishRouter)
