@@ -22,7 +22,8 @@ const user = mongoose.Schema({
       type: String
     },
     dishPollCount: {
-      Type: Number
+      required: "dish poll is required",
+      type: Number
     }
   }]
 });

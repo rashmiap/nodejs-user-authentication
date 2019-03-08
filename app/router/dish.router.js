@@ -25,8 +25,8 @@ router.post('/add', VerifyToken, function(req, res, next){
   }
   // Make new dish doc
   const dish = {
-    "description" : body.description,
     "dishPollCount": 0,
+    "description" : body.description
   };
   // execute the update query
   User.findOneAndUpdate({_id: req.userId}, {"$push": {"dish": dish}}, {new: true}, (err, doc)=> {
