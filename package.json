@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/rashmiap/nodejs-user-authentication.git"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "author": "Rashmi AP",
   "license": "ISC",
   "bugs": {
@@ -20,6 +23,7 @@
   "dependencies": {
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.0",
     "mongoose": "^5.4.16"

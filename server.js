@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+var cors = require('cors')
 let router = express.Router();
 const bodyParser = require('body-parser');
 const usersRouter = require('./app/router/user.router.js');
@@ -11,6 +12,9 @@ const PORT = 6000;
 
 const mongoose = require('mongoose')
 mongoose.connect(db.MONGO_DB_URI, { useNewUrlParser: true })
+
+// cors middleware added
+app.use(cors());
 
 //body parser middleware added
 app.use(bodyParser.urlencoded({ extended: false }));
