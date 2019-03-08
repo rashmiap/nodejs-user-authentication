@@ -1,0 +1,7 @@
+{
+	"name": "A Dish poll nodejs app",
+	"description": "A RESTful api server application for React-Native dish poll app using nodejs, express and mongoose",
+	"repository": "https://github.com/rashmiap/nodejs-user-authentication.git",
+  	"logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
+	"keywords": ["node", "express"]
+}
