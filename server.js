@@ -8,7 +8,7 @@ const dishRouter = require('./app/router/dish.router.js');
 const pollRouter = require('./app/router/poll.router.js');
 const db = require('./app/config/mongodb.env.js');
 
-const PORT = 6000;
+const PORT = process.env.PORT || 6000;
 
 const mongoose = require('mongoose')
 mongoose.connect(db.MONGO_DB_URI, { useNewUrlParser: true })
