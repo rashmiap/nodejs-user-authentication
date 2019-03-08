@@ -47,19 +47,17 @@ router.post('/poll', VerifyToken, function(req, res, next){
 
 // GET all dishes from all users
 router.get('/result', VerifyToken, function(req, res, next) {
-
-  User.find(
-    {},
-    // {$orderby: {'dish.$.dishPollCount': -1}},
-    (err, doc) => {
+  User.aggregate([
+    { $match : {"dish.dishPollCount": {$gte: 0}}},
+    { $unwind : "$dish" },
+    { $sort : {"dish.dishPollCount": -1}},
+    { $project: {"email": "$email", "dish": "$dish"}}
+    ],
+  ).exec(function (err, result) {
       if (err) {
-        return res.status(500).send(err, "There was a problem updating dish poll - 3rd ");
+        return res.status(500).send(err, "There was a problem fetching the poll results");
       }
-      else {
-        return res.json({
-          "datadd": doc
-        })
-      }
-    })
+      res.json({ results: result });
+  });
 });
 module.exports = router;
