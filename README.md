@@ -36,10 +36,10 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Endpoint:**  
 ```/api/auth/signup
 
-**Method:**  
-```POST```
+Method: 
+   POST
 
-**Body:**
+Body:
 {
     email: 'EMAIL@GMAIL.COM',
     password: '******'
@@ -50,10 +50,10 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Endpoint:**  
 ```/api/auth/login
 
-**Method:**  
+Method: 
    POST
 
-**Body:**
+Body:
 {
     email: 'EMAIL@GMAIL.COM',
     password: '******'
@@ -64,10 +64,10 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Endpoint:**  
 ```/api/dish/add
 
-**Method:**  
+Method: 
    POST
 
-**Body:**
+Body:
 {
     description: 'masala dose'
 }
@@ -77,7 +77,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Endpoint:**  
 ```/api/dish/list
 
-**Method:**  
+Method:
    GET
 ```
 ---
@@ -85,10 +85,10 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Endpoint:**  
 ```/api/dish/poll
 
-**Method:**  
+Method:
    POST
 
-**Body:**
+Body:
 {
 	UserId1: "5c765********a18b6f1920b",
 	DishId1: "5c765********a18b6f19204",
@@ -103,7 +103,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Endpoint:**  
 ```/api/dish/result
 
-**Method:**  
+Method: 
    GET
 ```
 ---
