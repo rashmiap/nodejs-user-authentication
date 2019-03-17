@@ -7,7 +7,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
   - MongoDB
   - ExpressJS
 
---
+---
 
 ### Usecase 
   - A user can register by entering email and password. 
