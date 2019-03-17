@@ -7,7 +7,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
   - MongoDB
   - ExpressJS
 
----
+--
 
 ### Usecase 
   - A user can register by entering email and password. 
@@ -21,7 +21,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
    - The backend is a MongoDB document database that stores users, dishes and poll data
 
 ---
-### User Stories:
+### User Stories
    - A new user can register to the dish poll by posting an email address and password to /api/auth/signup.
    - User can log in to the app by posting an email address and password to /api/auth/login which returns a unique JWT token for authentication.
    - Each user can add a dish to the poll by posting the dish's details to /api/dish/add.
@@ -30,7 +30,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
    - A user can view the result of the poll which is displayed in descending order of points received. /api/dish/result
 
 ---
-### Usage:
+### Usage
 
 #### Registering a New User
 **Endpoint:**  
@@ -42,7 +42,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Body:**
 ```
 {
-    email: 'EMAIL',
+    email: 'EMAIL@GMAIL.COM',
     password: '******'
 }
 ```
@@ -57,7 +57,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 **Body:**
 ```
 {
-    email: 'EMAIL',
+    email: 'EMAIL@GMAIL.COM',
     password: '******'
 }
 ```
