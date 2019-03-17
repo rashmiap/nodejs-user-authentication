@@ -51,7 +51,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 ```/api/auth/login
 
 **Method:**  
-```POST```
+   POST
 
 **Body:**
 {
@@ -65,7 +65,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 ```/api/dish/add
 
 **Method:**  
-  POST
+   POST
 
 **Body:**
 {
@@ -86,7 +86,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 ```/api/dish/poll
 
 **Method:**  
-```POST```
+   POST
 
 **Body:**
 {
@@ -104,7 +104,7 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 ```/api/dish/result
 
 **Method:**  
-```GET```
+   GET
 ```
 ---
 
