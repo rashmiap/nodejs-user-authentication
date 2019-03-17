@@ -79,6 +79,7 @@ Body:
 
 Method:
    GET
+   
 ```
 ---
 #### Add vote to the poll
@@ -105,6 +106,7 @@ Body:
 
 Method: 
    GET
+   
 ```
 ---
 
