@@ -96,9 +96,9 @@ NodeJS Application that provides user to register, login, add dishes to the poll
 {
 	UserId1: "5c765********a18b6f1920b",
 	DishId1: "5c765********a18b6f19204",
-  UserId2: "5c765********a18b6f19206",
+  	UserId2: "5c765********a18b6f19206",
 	DishId2: "5c765********a18b6f1920c",
-  UserId3: "5c765********a18b6f1920v",
+  	UserId3: "5c765********a18b6f1920v",
 	DishId3: "5c765********a18b6f19201",
 }
 ```
